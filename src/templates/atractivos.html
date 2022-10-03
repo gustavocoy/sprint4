@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+	 <link href="../static/css/styles.css" rel="stylesheet" />
+	 <link href="../static/css/index.css" rel="stylesheet" />
+
+	<title>BIENVENIDO A LA PAGINA PRINCIPAL</title>
+</head>
+<body>
+
+	<section class="page-section portfolio" id="portfolio">
+		<div class="container">
+		
+			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Destinos</h2>
+		
+			<br><br>  
+		
+			<div class="row justify-content-center">
+				{% for atractivo in atractivos%}
+			   
+				<div class="card">
+					<ul class="ul">
+						<li>
+							<i class="bx bx-drink"></i>
+						</li>
+						<li>
+							<i class="bx bx-film"></i>
+						</li>
+						<li>
+							<i class="bx bx-store-alt"></i>
+						</li>
+						<li>
+							<i class="bx bx-map"></i>
+						</li>
+					</ul>
+			
+						 
+					<img src="/src/static/img/Mirador2.jpg" alt="">
+					<div class="con-text">
+						<h6>
+							{{atractivo[1]}}  Ubicado en el municipio de {{atractivo[3]}}
+						</h6>
+						<p>
+							{{atractivo[2]}} <br><br>
+						<button>
+							ver mas
+						</button>
+						</p>
+					</div>
+				</div>
+
+				<!-- <div class="col-md-6 col-lg-4 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/bd3faa217002d4d3d9bc4cd5b6d8fc8c.jpg" alt="..." />
+						<p class="mb-4">{{atractivo[2]}}</p>
+						<p class="mb-4">Ubicado en el municipio de {{atractivo[3]}}</p>
+					</div>
+				</div> -->
+				{% endfor %}
+				<!-- <div class="col-md-6 col-lg-4 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/FOTO-IGLESIA-NUESTRA-SENORA-DE-GUADALUPE.jpg" alt="..." />
+					</div>
+				</div>
+			
+				<div class="col-md-6 col-lg-4 mb-5">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/ics20.jpg" alt="..." />
+					</div>
+				</div>
+			  
+				<div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/Mano-Para-El-Turismo..jpg" alt="..." />
+					</div>
+				</div>
+				
+				<div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/Mirador2.jpg" alt="..." />
+					</div>
+				</div> 
+			  
+				<div class="col-md-6 col-lg-4">
+					<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+						<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+							<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+						</div>
+						<img class="img-fluid" src="../static/img/Plan-al-desierto-la-Tatacoa-desde-Bogota.jpg" alt="..." />
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
+	
+</body>
+</html>

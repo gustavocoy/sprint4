@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>HUILA, UN DESTINO POR CONOCER</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="../static/css/index.css" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-small" href="./#page-top">HUILA, PARAISO POR CONOCER</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menú
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#portfolio">DESTINOS</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#about">HISTORIA</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#contact">ACERCA DE NOSOTROS</a></li>
+                        <div class="dropdown">
+                          <div class="  px-0" id="dropdownMenuButton" >
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            INGRESO
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./registro">Registrarse</a>
+                            <a class="dropdown-item" href="./ingreso">Ingresar</a>
+                          </ul>
+                        </div>
+                      </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                
+                <img class="masthead-avatar mb-5" src="../static/img/Logo.jpg" alt="..." />
+                
+                <h1 class="masthead-heading text-uppercase mb-0">CONOZCAMOS ESTE GRAN DEPARTAMENTO!!!</h1>
+                
+                <br>
+                
+                <p class="masthead-subheading font-weight-light mb-0">Un paraiso por descubrir</p>
+            </div>
+        </header>
+        
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+            
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Destinos</h2>
+            
+                <br><br>  
+            
+                <div class="row justify-content-center">
+                    {% for atractivo in atractivos%}
+                   
+                    <div class="card">
+                        <!-- <ul class="ul">
+                            <li>
+                                <i class="bx bx-drink"></i>
+                            </li>
+                            <li>
+                                <i class="bx bx-film"></i>
+                            </li>
+                            <li>
+                                <i class="bx bx-store-alt"></i>
+                            </li>
+                            <li>
+                                <i class="bx bx-map"></i>
+                            </li>
+                        </ul> -->
+                
+                             
+                        <img src="/src/static/img/Mirador2.jpg" alt="">
+                        <div class="con-text">
+                            <h6>
+                                {{atractivo[1]}}  Ubicado en el municipio de {{atractivo[2]}}
+                            </h6>
+                            <p>
+                                {{atractivo[3]}} <br><br>
+                            <!-- <button>
+                                ver mas
+                            </button> -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/bd3faa217002d4d3d9bc4cd5b6d8fc8c.jpg" alt="..." />
+                            <p class="mb-4">{{atractivo[2]}}</p>
+                            <p class="mb-4">Ubicado en el municipio de {{atractivo[3]}}</p>
+                        </div>
+                    </div> -->
+                    {% endfor %}
+                    <!-- <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/FOTO-IGLESIA-NUESTRA-SENORA-DE-GUADALUPE.jpg" alt="..." />
+                        </div>
+                    </div>
+                
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/ics20.jpg" alt="..." />
+                        </div>
+                    </div>
+                  
+                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/Mano-Para-El-Turismo..jpg" alt="..." />
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/Mirador2.jpg" alt="..." />
+                        </div>
+                    </div> 
+                  
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="../static/img/Plan-al-desierto-la-Tatacoa-desde-Bogota.jpg" alt="..." />
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                
+                <h2 class="page-section-heading text-center text-uppercase text-white">Historia</h2>
+                
+                <br>
+                
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">Significado de la palabra Huila: Es de origen indigena y significa anaranjado. En lengua Páez Montaña Luminosa.
+                    <br><br>                                     
+                      El departamento del Huila fue creado mediante Ley 46 de 1905.
+                       <br><br>
+                      La historia del departamento del Huila está sustentada en el legado de la cultura Agustiniana, situada entre los años 1000 AC y 1650 DC.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead"></p> La importancia de esta cultura ha sido reconocida por la UNESCO que en 1995 les confirió a los parques Arqueológicos de San Agustín, Alto de Los Ídolos y Alto de Las Piedras, la categoris de Patrimonio Cultural de la Humanidad.</div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row" id="contact">
+                    
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Ubicación</h4>
+                        <p class="lead mb-0">
+                            HUILA- COLOMBIA
+                            <br />
+                            GRUPO #6, <br> EQUIPO #4
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">REDES</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/groups/3181898322099386" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/Ministerio_TIC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://co.linkedin.com/in/misi%C3%B3n-tic-63034a208?trk=public_profile_browsemap" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="/contacto"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">MINTIC "2022"</h4>
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- {% for atractivo in atractivos%}
+       
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">{{atractivo[1]}}</h2>
+                                    
+                                    
+                                    
+                                    <img class="img-fluid rounded mb-5" src="../static/img/bd3faa217002d4d3d9bc4cd5b6d8fc8c.jpg" alt="..." />
+                                    
+                                    <p class="mb-4">{{atractivo[2]}}</p>
+                                    <p class="mb-4">Ubicado en el municipio de {{atractivo[3]}}</p>
+                                      <a href="./atractivos" class="btn btn-warning btn-sm "><i class="fas fa-xmark fa-fw"></i>Ver mas</a>
+                                      <a class="btn btn-danger btn-sm "data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>Cerrar</a>                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        {% endfor %} -->
+        <!-- <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">GUADALUPE</h2>
+                                    
+                                    
+                                    
+                                    <img class="img-fluid rounded mb-5" src="../static/img/FOTO-IGLESIA-NUESTRA-SENORA-DE-GUADALUPE.jpg" alt="..." />
+                                    
+                                    <p class="mb-4">Guadalupe es un municipio colombiano ubicado al sur del departamento de Huila, a margen izquierda del
+                                       valle del río Suaza, sobre los flancos de la cordillera Oriental. Su extensión territorial es de 242 km², su altura 
+                                       es de 940 msnm y su temperatura promedio es de 22°C.3​</p>
+                                       <a href="./atractivos" class="btn btn-warning btn-sm "><i class="fas fa-xmark fa-fw"></i>Ver mas</a>
+                                       <a class="btn btn-danger btn-sm "data-bs-dismiss="modal"><i class="fas fa-xmark fa-fw"></i>Cerrar</a>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Termales de morelia</h2>
+                                    
+                                    
+                                   
+                                    <img class="img-fluid rounded mb-5" src="../static/img/ics20.jpg" alt="..." />
+                                    
+                                    <p class="mb-4">Las Termales de Morelia está ubicado a 29 Kilometros de la poblacion de Saladoblanco en el Parque
+                                       Nacional Natural Puracé en el Departamento del Huila Colombia. Donde podrá disfrutar de caminatas ecológicas,
+                                        cascadas, avistamiento de aves, con la  visita  a la finca Vegonia donde encontrara estatuas talladas en piedra 
+                                        por la población indígena el Yalcón, tumbas de cancel cerámicas y un excelente plato de trucha ahumada con puré de yota.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">La mano gigante</h2>
+                                   
+                                    <img class="img-fluid rounded mb-5" src="../static/img/Mano-Para-El-Turismo..jpg" alt="..." />
+                                    
+                                    <p class="mb-4">Se encuentra a 1.480 metros sobre el nivel del mar, a una distancia de 6 kilómetros de
+                                       la Ruta Nacional 45, a 9,3 kilómetros del casco urbano del Municipio de Gigante 
+                                      y a 90 kilómetros de la capital del Huila, el acceso es por el desvío hacia el centro poblado de Potrerillos,
+                                       la carretera desde este punto es destapada.
+                                          <br>
+                                      Es un proyecto ecoturístico donde se combina el arte y el paisaje, en el año 2020 cambio 
+                                      su nombre a Montaña La Mano del Gigante, el creador de la escultura es Cristian Palomino.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Mirador MAYÚ</h2>
+                                    
+                                   
+                                    
+                                    <img class="img-fluid rounded mb-5" src="../static/img/Mirador2.jpg" alt="..." />
+                                    
+                                    <p class="mb-4">Ubicado en el anillo turístico del municipio de ISNOS, rodeados de un sin número
+                                       de paisajes maravillosos, vista al cañón del rio magdalena donde se unen las cordilleras central 
+                                       y oriental. Considerados como uno de los destinos más importantes del Sur del Huila, gracias a 
+                                       que es un lugar con alma que rinde homenaje la arqueología y las raíces campesinas, una mezcla 
+                                       perfecta entre diversión, paisaje, cultura, adrenalina, café, panela, arte, tradición, 
+                                       arquitctura, gastronomía, aventura, alegría, sano esparcimiento e interacción con la zoología 
+                                       doméstica.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Desierto de la Tatacoa</h2>
+                                   
+                                    
+                                    <img class="img-fluid rounded mb-5" src="../static/img/Plan-al-desierto-la-Tatacoa-desde-Bogota.jpg" alt="..." />
+                                    
+                                    <p class="mb-4">El desierto de la Tatacoa es un lugar ideal para los aficionados a la astronomía y a la paleontología, 
+                                      para los amantes de la naturaleza, para los fotógrafos y para todo aquel que quiera observar las estrellas en Colombia.</p>
+                                      <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d15891.056776793645!2d-73.83478293389426!3d5.299447854571409!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x8e40385c21680aa3%3A0xea6f4df290f89e2c!2sLLANTAS%20EL%20CONTAINERS%20SAS%2C%20ubate%20km%201%20via%20Ubate%20-Bogota%2C%20Ubat%C3%A9%2C%20Villa%20de%20San%20Diego%20de%20Ubat%C3%A9%2C%20Cundinamarca!3m2!1d5.2873513999999995!2d-73.8199249!4m5!1s0x8e40387e10947cf9%3A0x48291ddbdb3c145c!2sConvento%20Franciscano%20de%20San%20Luis%2C%20Ubat%C3%A9%2C%20Villa%20de%20San%20Diego%20de%20Ubat%C3%A9%2C%20Cundinamarca!3m2!1d5.3035324!2d-73.8370152!5e0!3m2!1ses!2sco!4v1662484302048!5m2!1ses!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                      <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Cerrar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+          crossorigin="anonymous"></script>
+        <!-- <script src="{{url_for('static', filename='js/index.js')}}"></script> -->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

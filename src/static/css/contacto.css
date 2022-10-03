@@ -1,0 +1,11 @@
+td{
+    border-color: black;
+   
+}
+table{
+    border-color: brown;
+    align-content: center;
+}
+caption{
+    float:inline-end;
+}
