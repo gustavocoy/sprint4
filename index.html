@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>HUILA, UN DESTINO POR CONOCER</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="../static/css/index.css" rel="stylesheet" />
+        
+    </head>
+    <body id="page-top">
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-small" href="./#page-top">HUILA, PARAISO POR CONOCER</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menú
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#portfolio">DESTINOS</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#about">HISTORIA</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="./#contact">ACERCA DE NOSOTROS</a></li>
+                        <div class="dropdown">
+                          <div class="  px-0" id="dropdownMenuButton" >
+                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            INGRESO
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./registro">Registrarse</a>
+                            <a class="dropdown-item" href="./ingreso">Ingresar</a>
+                          </ul>
+                        </div>
+                      </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                
+                <img class="masthead-avatar mb-5" src="../static/img/Logo.jpg" alt="..." />
+                
+                <h1 class="masthead-heading text-uppercase mb-0">CONOZCAMOS ESTE GRAN DEPARTAMENTO!!!</h1>
+                
+                <br>
+                
+                <p class="masthead-subheading font-weight-light mb-0">Un paraiso por descubrir</p>
+            </div>
+        </header>
+        
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+            
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Destinos</h2>
+            
+                <br><br>  
+            
+                <div class="row justify-content-center">
+                    {% for atractivo in atractivos%}
+                   
+                    <div class="card">
+                       
+                        <img src="/src/static/img/Mirador2.jpg" alt="">
+                        <div class="con-text">
+                            <h6>
+                                {{atractivo[1]}}  Ubicado en el municipio de {{atractivo[2]}}
+                            </h6>
+                            <p>
+                                {{atractivo[3]}} <br><br>
+                           
+                            </p>
+                        </div>
+                    </div>
+
+                   
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </section>
+        
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                
+                <h2 class="page-section-heading text-center text-uppercase text-white">Historia</h2>
+                
+                <br>
+                
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">Significado de la palabra Huila: Es de origen indigena y significa anaranjado. En lengua Páez Montaña Luminosa.
+                    <br><br>                                     
+                      El departamento del Huila fue creado mediante Ley 46 de 1905.
+                       <br><br>
+                      La historia del departamento del Huila está sustentada en el legado de la cultura Agustiniana, situada entre los años 1000 AC y 1650 DC.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead"></p> La importancia de esta cultura ha sido reconocida por la UNESCO que en 1995 les confirió a los parques Arqueológicos de San Agustín, Alto de Los Ídolos y Alto de Las Piedras, la categoris de Patrimonio Cultural de la Humanidad.</div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row" id="contact">
+                    
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Ubicación</h4>
+                        <p class="lead mb-0">
+                            HUILA- COLOMBIA
+                            <br />
+                            GRUPO #6, <br> EQUIPO #4
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">REDES</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/groups/3181898322099386" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/Ministerio_TIC?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><i class="fab fa-fw fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://co.linkedin.com/in/misi%C3%B3n-tic-63034a208?trk=public_profile_browsemap" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="/contacto"><i class="fab fa-fw fa-dribbble"></i></a>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">MINTIC "2022"</h4>
+                       
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+       
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+          crossorigin="anonymous"></script>
+        <!-- <script src="{{url_for('static', filename='js/index.js')}}"></script> -->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
